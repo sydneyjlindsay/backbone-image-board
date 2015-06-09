@@ -1,6 +1,8 @@
 $(document).on('ready', function() {
 
 	$('#form-container').hide();
+	$('#url-alert').hide();
+	$('#caption-alert').hide();
 
 	$('#btn-plus').on('click', function() {
 		console.log('button clicked');
@@ -28,14 +30,15 @@ $(document).on('ready', function() {
 		if(newImage.isValid()) {
 			imageFeed.add(newImage);
 			newImage.save();
+			$('#input-url').val('');
+			$('#input-caption').val('');
 		}
 		else {
 			console.log(newImage.validationError);
 		}
 		console.log(newImage);
 
-		$('#input-url').val('');
-		$('#input-caption').val('');
+		
 	});
 
 	imageFeed.on('add', function(model) {
