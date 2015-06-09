@@ -13,7 +13,7 @@ var ImageModel = Backbone.Model.extend({
 		}
 		return false;
 	}, 
+
 	urlRoot:'http://tiy-fee-rest.herokuapp.com/collections/syd-image-model', 
 	idAttribute: '_id'
-	
 });
